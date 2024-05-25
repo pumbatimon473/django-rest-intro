@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from .views import users_crude, users, get_or_replace_or_update_or_delete_user
 from .views import UserListCreateAPIView, UserRetrieveUpdateDestroyAPIView
-from .views import UserAPIView
+from .views import UserAPIView, UserGetReplaceUpdateDeleteAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,4 +31,6 @@ urlpatterns = [
     path('users/class/<int:id>', UserRetrieveUpdateDestroyAPIView.as_view()),
     # class views: v3
     path('users/api', UserAPIView.as_view()),
+    path('users/api/<int:id>', UserGetReplaceUpdateDeleteAPIView.as_view()),
+
 ]

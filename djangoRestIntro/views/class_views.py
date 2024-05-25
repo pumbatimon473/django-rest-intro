@@ -11,4 +11,4 @@ class UserListCreateAPIView(ListCreateAPIView):
 class UserRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    lookup_field = 'id'
+    lookup_field = 'id' # default 'pk'

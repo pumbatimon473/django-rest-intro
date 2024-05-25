@@ -1,3 +1,3 @@
 from .function_views import users_crude, users, get_or_replace_or_update_or_delete_user
 from .class_views import UserListCreateAPIView, UserRetrieveUpdateDestroyAPIView
-from .api_views import UserAPIView
+from .api_views import UserAPIView, UserGetReplaceUpdateDeleteAPIView
